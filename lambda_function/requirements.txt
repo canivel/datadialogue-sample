@@ -1,0 +1,6 @@
+numpy==1.24.4
+langchain==0.0.265
+langchain-experimental==0.0.9
+pyathena==2.25.2
+SQLAlchemy==1.4.49
+openai==0.27.8
