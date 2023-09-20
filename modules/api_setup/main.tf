@@ -108,6 +108,13 @@ resource "aws_iam_role_policy_attachment" "lambda_athena_access" {
   policy_arn = aws_iam_policy.lambda_athena_access.arn
 }
 
+locals {
+  split_uri        = split(".", split("/", var.image_uri_var)[0])
+  account_id       = local.split_uri[0]
+  region           = local.split_uri[3]
+  repository_name  = split(":", split("/", var.image_uri_var)[1])[0]
+  ecr_arn          = "arn:aws:ecr:${local.region}:${local.account_id}:repository/${local.repository_name}"
+}
 resource "aws_iam_policy" "lambda_ecr_access" {
   name        = "LambdaECRAccessPolicy"
   description = "Allows lambda to pull images from ECR"
@@ -122,7 +129,7 @@ resource "aws_iam_policy" "lambda_ecr_access" {
           "ecr:BatchCheckLayerAvailability"
         ],
         Effect   = "Allow",
-        Resource = "arn:aws:ecr:us-east-1:920886048339:repository/lambda-langchain"
+        Resource = local.ecr_arn
       }
     ]
   })

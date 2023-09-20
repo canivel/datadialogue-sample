@@ -11,5 +11,5 @@ variable "glue_database_name" {
 variable "image_uri_var" {
   description = "The Image URI from ECR"
   type        = string
-  default     = "<account_id>.dkr.ecr.us-east-1.amazonaws.com/lambda-langchain:latest"
+  default     = "920886048339.dkr.ecr.us-east-1.amazonaws.com/lambda-langchain:latest"
 }
