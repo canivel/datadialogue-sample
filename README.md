@@ -1,4 +1,4 @@
-![DataDialogue Logo](https://raw.githubusercontent.com/canivel/datadialogue/main/images/logo.png)
+![DataDialogue Logo](https://raw.githubusercontent.com/canivel/datadialogue-sample/main/images/logo.png)
 
 # DataDialogue
 
