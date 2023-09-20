@@ -1,6 +1,6 @@
 ![DataDialogue Logo](https://raw.githubusercontent.com/canivel/datadialogue-sample/main/images/logo.png)
 
-# DataDialogue
+# DataDialogue.ai Samples: Bridging Generative AI with AWS Data Catalog (Glue)
 
 Welcome to DataDialogue! This package allows you to deploy a Data Catalog in AWS Glue that interfaces with the OpenAI API through a Langchain Lambda function. The purpose is to execute SQL queries against your data catalog using an Athena-based connection. Additionally, an API Gateway is deployed that uses AWS Cognito for authentication.
 
